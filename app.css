@@ -439,3 +439,76 @@ dialog#movie-dialog::backdrop {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
+
+/* År filter styling */
+.year-filter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.year-filter input {
+  width: 80px;
+  background: var(--bg-card);
+  color: var(--text);
+  border: 1px solid var(--secondary);
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.year-filter input:focus {
+  outline: 2px solid var(--secondary);
+  border-color: var(--secondary);
+}
+
+/* Rating filter styling */
+.rating-filter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rating-filter input {
+  width: 80px;
+  background: var(--bg-card);
+  color: var(--text);
+  border: 1px solid var(--secondary);
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.rating-filter input:focus {
+  outline: 2px solid var(--secondary);
+  border-color: var(--secondary);
+}
+
+#clear-filters {
+  background: var(--bg-card);
+  color: var(--text);
+  border: 1px solid var(--secondary);
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+#clear-filters:hover {
+  background: var(--error);
+  color: white;
+  border-color: var(--error);
+  transform: translateY(-2px);
+}
+
+#clear-filters:focus {
+  outline: 2px solid var(--secondary);
+  border-color: var(--secondary);
+}
