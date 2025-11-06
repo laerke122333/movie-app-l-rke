@@ -3,7 +3,7 @@
    ===================== */
 :root {
   /* Colors */
-  --primary: #264c59;
+  --primary: #436f7d;
   --secondary: #acc6c9;
   --primary-light: #42535c;
   --secondary-light: #3c4043;
@@ -13,7 +13,7 @@
   --text-light: #dadce0;
 
   /* Backgrounds - Dark Mode */
-  --bg: #202124;
+  --bg: #000000;
   --bg-card: #3c4043;
 
   /* Semantic */
@@ -105,9 +105,9 @@ main {
    HEADER & FOOTER
    ===================== */
 header {
-  background: rgba(38, 76, 89, 0.8);
+  background: rgba(58, 113, 131, 0.8);
   backdrop-filter: blur(20px) saturate(180%);
-  border-bottom: 1px solid rgba(172, 198, 201, 0.2);
+  border-bottom: 1px solid rgba(136, 150, 210, 0.2);
   color: var(--text);
   padding: 1rem 0;
   text-align: center;
@@ -145,8 +145,8 @@ footer {
   flex-direction: column;
   border-radius: 8px;
   overflow: hidden;
-  background: rgb(0, 0, 0);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: rgb(140, 159, 185);
+  box-shadow: 0 2px 8px rgba(113, 117, 198, 0.1);
   transition: transform 0.2s ease;
 }
 
@@ -415,40 +415,27 @@ dialog#movie-dialog::backdrop {
   }
 }
 
-/* Mobile først - 1 kolonne 
-#movie-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  padding: 1rem;
-}
-
-Tablet - 2 kolonner 
-@media (min-width: 600px) {
-  #movie-list {
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    padding: 2rem;
-  }
-}
-
-Desktop - 3 kolonner 
-@media (min-width: 992px) {
-  #movie-list {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-/* Store skærme - 4 kolonner 
-@media (min-width: 1400px) {
-  #movie-list {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-} */
+/* Responsive movie grid breakpoints:
+   Mobile: 1 column
+   Tablet (>=600px): 2 columns
+   Desktop (>=992px): 3 columns
+   Large screens (>=1400px): 4 columns
+   (Final grid uses auto-fit/minmax below)
+*/
 
 #movie-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
   padding: 1rem;
+}
+/* Tilføj til din app.css */
+.movie-card {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
